@@ -1,8 +1,81 @@
-# React + Vite
+# React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一個使用 React + Vite 開發的代辦事項應用程式。
 
-Currently, two official plugins are available:
+## 功能特性
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ **新增代辦事項** - 輸入內容後新增到列表中  
+✅ **編輯代辦事項** - 點擊編輯按鈕修改已有的代辦事項  
+✅ **刪除代辦事項** - 移除不需要的代辦事項  
+✅ **標記完成** - 點擊文字切換代辦事項的完成狀態  
+✅ **輸入驗證** - 防止輸入空白內容
+
+## 技術棧
+
+- **React** - UI 框架
+- **Vite** - 開發工具和打包工具
+- **react-icons** - 圖標庫（用於編輯和刪除按鈕）
+
+## 專案結構
+
+```
+my-react-todo/
+├── src/
+│   ├── components/
+│   │   ├── CreateForm.jsx      # 新增表單元件
+│   │   ├── Todo.jsx            # 單個代辦事項元件
+│   │   └── TodoWrap.jsx        # 代辦事項容器元件
+│   ├── App.jsx                 # 主應用元件
+│   ├── App.css                 # 應用樣式
+│   └── main.jsx                # 入口文件
+├── public/                     # 靜態資源
+├── package.json
+├── vite.config.js
+└── index.html
+```
+
+## 快速開始
+
+### 安裝依賴
+
+```bash
+npm install
+```
+
+### 開發模式
+
+```bash
+npm run dev
+```
+
+### 生產打包
+
+```bash
+npm run build
+```
+
+## 使用方式
+
+1. 在輸入框中輸入代辦事項內容
+2. 點擊「新增」按鈕添加到列表
+3. 點擊文字可標記為完成/未完成
+4. 點擊編輯圖標可編輯代辦事項
+5. 點擊刪除圖標可移除代辦事項
+
+## 主要元件說明
+
+### CreateForm.jsx
+負責新增代辦事項，包含：
+- 文字輸入框
+- 表單提交驗證（防止空白輸入）
+
+### Todo.jsx
+顯示單個代辦事項，包含：
+- 代辦事項內容（可點擊標記完成）
+- 編輯按鈕
+- 刪除按鈕
+
+### TodoWrap.jsx
+管理代辦事項列表，包含：
+- 代辦事項狀態管理
+- 新增、編輯、刪除、切換完成狀態的邏輯
