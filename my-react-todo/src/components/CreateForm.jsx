@@ -5,7 +5,7 @@ function CreateForm({ addTodo }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (content.trim() === "") {
-      alert("請輸入代辦事項");
+      alert("不可輸入空白內容");
       return;
     }
     addTodo(content);
